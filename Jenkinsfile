@@ -36,6 +36,13 @@ pipeline{
 			
 			}
  	}
+		stage('Deploy to tomcat8'){
+			steps{
+			bat "copy target\\myweb.war D:\\Krishna\\AWS\\tomcat\\apache-tomcat-8.5.39\\webapps\\"
+			
+			}
+ 	}
+		
 		
 		
 		
