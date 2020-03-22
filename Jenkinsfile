@@ -22,6 +22,19 @@ pipeline{
  	}
 	
 		
+		stage('Maven Build - Test'){
+			steps{
+			bat "mvn test"
+			
+			}
+ 	}
+	
+		stage('Maven Build - PKG'){
+			steps{
+			bat "mvn package"
+			
+			}
+ 	}
 		
 		
 		
