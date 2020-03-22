@@ -17,6 +17,7 @@ pipeline{
 	 	stage('Maven Build'){
 			steps{
 			bat "mvn clean install"
+			bat "rename myweb-*.war myweb.war"
 			}
  	}
 	}
