@@ -32,7 +32,7 @@ pipeline{
 		stage('Maven Build - PKG with Rename war file'){
 			steps{
 			bat "mvn package"
-			bat "rename D:/Krishna/AWS/jenkins/workspace/maven_project/target/myweb-*.war myweb.war"
+			bat "rename target/myweb-8.3.2.war myweb.war"
 			
 			}
  	}
