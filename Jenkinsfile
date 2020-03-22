@@ -14,11 +14,21 @@ pipeline{
 		}
 	
 	
-	 	stage('Maven Build'){
+	 	stage('Maven Build - Clean - Test'){
 			steps{
-			bat "mvn clean test install"
+			bat "mvn clean test"
+			
+			}
+ 	}
+	stage('Maven Build Install'){
+			steps{
+			bat "mvn install"
 			bat "rename myweb-*.war myweb.war"
 			}
  	}
+		
+		
+		
+		
 	}
  }
