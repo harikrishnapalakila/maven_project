@@ -14,7 +14,7 @@ pipeline{
 		}
 	
 	
-	 	stage('Maven Build - Clean - Test'){
+	 	stage('Maven Build - Clean'){
 			steps{
 			bat "mvn clean"
 			
@@ -29,9 +29,10 @@ pipeline{
 			}
  	}
 	
-		stage('Maven Build - PKG'){
+		stage('Maven Build - PKG with Rename war file'){
 			steps{
 			bat "mvn package"
+			bat "rename myweb-*.war myweb.war"
 			
 			}
  	}
